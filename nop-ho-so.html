@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nộp Hồ Sơ Online & Kết Nối Quỹ Đầu Tư | Trần Gia Capital Group (TGCG)</title>
+  <meta name="description" content="Cổng tiếp nhận Hồ sơ Đề xuất Hợp tác Đầu tư FDI/PPP, Kết nối Quỹ Tập đoàn, Đối tác Vận hành 7 sao và Ứng tuyển Nhân sự Cấp cao TGCG." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="app-header"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a> <span class="sep">/</span> <span>Nộp Hồ Sơ Online & Cổng Kết Nối Quỹ</span>
+      </div>
+      <span class="section-tag emerald">Module 03 • Cổng Tiếp Nhận Bảo Mật CRM / ERP</span>
+      <h1 class="section-title">Cổng Nộp Hồ Sơ Online & <span class="gold-text">Đăng Ký Hợp Tác Chiến Lược</span></h1>
+      <p class="section-desc">
+        Hệ thống tiếp nhận trực tuyến đồng bộ trực tiếp về Trung tâm Thẩm định Năng lực & Quản trị CRM/ERP của <strong>CÔNG TY CỔ PHẦN TRẦN GIA CAPITAL GROUP (TGCG)</strong> theo tiêu chuẩn bảo mật quốc tế NDA.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+      <div class="grid-2" style="grid-template-columns: 1.25fr 0.75fr; align-items: start;">
+        <!-- Cột Trái: Form Nộp Hồ Sơ Đa Năng -->
+        <div class="luxury-card" style="padding: 38px;">
+          <div style="border-bottom: 1px solid var(--border-subtle); padding-bottom: 18px; margin-bottom: 24px;">
+            <span class="badge-pill badge-gold">BẢO MẬT CHUẨN NDA & ISO 27001</span>
+            <h2 style="font-family: var(--font-serif); font-size: 2rem; color: #fff; margin-top: 8px;">
+              Biểu Mẫu Đệ Trình Hồ Sơ Trực Tuyến
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+              Vui lòng lựa chọn đúng phân loại hồ sơ để hệ thống tự động định tuyến tới Hội đồng Thẩm định hoặc Công ty Thành viên phụ trách.
+            </p>
+          </div>
+
+          <form id="onlineApplicationForm" onsubmit="submitTGCGApplication(event)">
+            <div class="form-group">
+              <label class="form-label">1. Phân loại Hồ sơ Đệ trình *</label>
+              <select class="form-control" id="appType" required>
+                <option value="FDI_FUND">1. Đăng ký Kết nối Quỹ Đầu tư Quốc tế (FDI / Green Finance / Blue Carbon)</option>
+                <option value="PPP_INFRA">2. Hồ sơ Đề xuất Hợp tác Đầu tư Hạ tầng PPP (Cảng biển, Năng lượng, Sân bay)</option>
+                <option value="STRATEGIC_PARTNER">3. Hồ sơ Năng lực Đối tác Chiến lược (Vận hành 7 sao, BIM Parametric, AI/SCADA)</option>
+                <option value="CONTRACTOR">4. Hồ sơ Năng lực Nhà thầu Xây dựng & Cung ứng Vật liệu Xanh</option>
+                <option value="EXEC_TALENT">5. Ứng tuyển Nhân sự Cấp cao / Chuyên gia Quốc tế (Executive Talent)</option>
+              </select>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label class="form-label">2. Tên Tổ chức / Quỹ Đầu tư / Cá nhân *</label>
+                <input type="text" class="form-control" id="orgName" placeholder="VD: Global Green Infrastructure Fund..." required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">3. Quốc gia / Khu vực Đăng ký Pháp nhân *</label>
+                <input type="text" class="form-control" id="country" placeholder="VD: Việt Nam / Singapore / EU / Hoa Kỳ..." required />
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label class="form-label">4. Người Đại diện Liên hệ & Chức vụ *</label>
+                <input type="text" class="form-control" id="contactPerson" placeholder="Họ tên & Chức danh..." required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">5. Đơn vị Thành viên TGCG muốn kết nối</label>
+                <select class="form-control" id="targetSub">
+                  <option value="ALL">Công ty Mẹ: Trần Gia Capital Group (TGCG)</option>
+                  <option value="TGC-INV">1. Tran Gia Capital JSC (M&A & Đầu tư)</option>
+                  <option value="TGC-DEV">2. Tran Gia Development JSC (Phát triển BĐS)</option>
+                  <option value="TGC-HOS">3. Tran Gia Hospitality JSC (Khách sạn & Khu nghỉ dưỡng)</option>
+                  <option value="TGC-HMG">4. Tran Gia Hotel Management JSC (Quản lý & Vận hành KS)</option>
+                  <option value="TGC-AMG">5. Tran Gia Asset Management JSC (Quản lý tài sản)</option>
+                  <option value="TGC-FMG">6. Tran Gia Fund Management JSC (Quản lý quỹ)</option>
+                  <option value="TGC-CON">7. Tran Gia Construction JSC (Xây dựng)</option>
+                  <option value="TGC-ENE">8. Tran Gia Energy JSC (Năng lượng)</option>
+                  <option value="TGC-MAR">9. Tran Gia Marina JSC (Bến du thuyền & Cảng biển)</option>
+                  <option value="TGC-TRV">10. Tran Gia Travel JSC (Du lịch & Lữ hành)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label class="form-label">6. Email Công vụ *</label>
+                <input type="email" class="form-control" id="email" placeholder="partner@organization.com" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">7. Số điện thoại / Hotline Quốc tế *</label>
+                <input type="tel" class="form-control" id="phone" placeholder="+84 ... / +65 ..." required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">8. Phân khu Dự án hoặc Quy mô Vốn Quan tâm (USD)</label>
+              <input type="text" class="form-control" id="capitalScale" placeholder="VD: Durian Crown Tower (8.5B USD), Green Energy City (4.8B USD)..." />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">9. Tóm tắt Năng lực & Đề xuất Hợp tác *</label>
+              <textarea class="form-control" id="summary" rows="4" placeholder="Trình bày tóm tắt năng lực tài chính, kinh nghiệm triển khai dự án tương đương hoặc đề xuất hợp tác..." required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">10. Đính kèm Hồ sơ Năng lực / Báo cáo Tài chính / Proposal (PDF, DOCX, ZIP - Tối đa 50MB)</label>
+              <input type="file" class="form-control" id="fileAttachment" accept=".pdf,.doc,.docx,.zip,.pptx" />
+            </div>
+
+            <div style="margin: 20px 0; font-size: 0.85rem; color: #cbd5e1; display: flex; gap: 10px; align-items: flex-start;">
+              <input type="checkbox" id="ndaConsent" required style="margin-top: 4px;" />
+              <label for="ndaConsent">
+                Tôi xác nhận các thông tin kê khai là chính xác và đồng ý với <strong>Thỏa thuận Bảo mật Thông tin (NDA)</strong> cũng như Quy chuẩn Thẩm định 5 bước của Trần Gia Capital Group.
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-gold" style="width: 100%; padding: 16px; font-size: 1rem;">
+              🚀 Gửi Hồ Sơ Đề Xuất & Nhận Mã Định Danh Thẩm Định
+            </button>
+          </form>
+
+          <!-- Thông báo kết quả nộp hồ sơ -->
+          <div id="submissionResult" style="display: none; margin-top: 24px; padding: 24px; border-radius: 12px; background: rgba(16, 185, 129, 0.15); border: 1px solid var(--emerald-primary);"></div>
+        </div>
+
+        <!-- Cột Phải: Quy chuẩn 5 Bước Tiếp Nhận & Thông Tin Liên Hệ Chính Danh -->
+        <div>
+          <div class="luxury-card" style="margin-bottom: 24px;">
+            <span class="section-tag">Quy Chuẩn Thẩm Định Quốc Tế</span>
+            <h3 style="font-family: var(--font-serif); font-size: 1.65rem; color: #fff; margin-bottom: 16px;">
+              Lộ Trình 5 Bước Xử Lý Hồ Sơ Hợp Tác
+            </h3>
+            <ul style="display: flex; flex-direction: column; gap: 14px; font-size: 0.88rem;">
+              <li style="padding: 12px; background: rgba(255,255,255,0.03); border-left: 3px solid var(--gold-primary); border-radius: 6px;">
+                <strong style="color: var(--gold-light); display: block;">Bước 1: Tiếp nhận & Thẩm định Năng lực</strong>
+                <span style="color: var(--text-muted);">Cấp mã hồ sơ tự động trên hệ thống ERP/CRM trong vòng 24 giờ làm việc.</span>
+              </li>
+              <li style="padding: 12px; background: rgba(255,255,255,0.03); border-left: 3px solid var(--gold-primary); border-radius: 6px;">
+                <strong style="color: var(--gold-light); display: block;">Bước 2: Ký kết NDA & MOU</strong>
+                <span style="color: var(--text-muted);">Ký thỏa thuận bảo mật NDA và Biên bản ghi nhớ hợp tác chiến lược MOU.</span>
+              </li>
+              <li style="padding: 12px; background: rgba(255,255,255,0.03); border-left: 3px solid var(--gold-primary); border-radius: 6px;">
+                <strong style="color: var(--gold-light); display: block;">Bước 3: Phối hợp Pháp lý Chuyên ngành</strong>
+                <span style="color: var(--text-muted);">Hoàn thiện hồ sơ chủ trương đầu tư, quy hoạch 1/500, EIA & ESG.</span>
+              </li>
+              <li style="padding: 12px; background: rgba(255,255,255,0.03); border-left: 3px solid var(--gold-primary); border-radius: 6px;">
+                <strong style="color: var(--gold-light); display: block;">Bước 4: Ký kết Hợp đồng Liên doanh / PPP / FDI</strong>
+                <span style="color: var(--text-muted);">Xác lập cấu trúc vốn và nghĩa vụ pháp lý giữa các bên.</span>
+              </li>
+              <li style="padding: 12px; background: rgba(255,255,255,0.03); border-left: 3px solid var(--emerald-primary); border-radius: 6px;">
+                <strong style="color: #6ee7b7; display: block;">Bước 5: Giải ngân & Vận hành chuẩn ESG</strong>
+                <span style="color: var(--text-muted);">Triển khai dự án và giám sát dòng vốn minh bạch theo chuẩn quốc tế.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="luxury-card">
+            <h4 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--gold-light); margin-bottom: 12px;">
+              Văn Phòng Đại Diện Tiếp Nhận Trực Tiếp
+            </h4>
+            <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 12px;">
+              <strong>Đơn vị:</strong> CÔNG TY CỔ PHẦN TRẦN GIA CAPITAL GROUP (TGCG)
+            </p>
+            <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 10px;">
+              📍 <strong>Địa chỉ / Văn phòng Đại diện:</strong> 35 Hùng Vương, Ba Đình, Hà Nội
+            </p>
+            <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 10px;">
+              📞 <strong>Hotline Ban Đầu tư:</strong> <a href="tel:0847770668" style="color: var(--gold-light); font-weight: 700;">0847770668</a>
+            </p>
+            <p style="font-size: 0.88rem; color: #cbd5e1;">
+              ✉️ <strong>Email Công vụ:</strong> <a href="mailto:tgcg.vn.com@gmail.com" style="color: var(--gold-light); font-weight: 700;">tgcg.vn.com@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="app-footer"></div>
+
+  <script src="js/main.js"></script>
+  <script>
+    function submitTGCGApplication(e) {
+      e.preventDefault();
+      const org = document.getElementById('orgName').value;
+      const appTypeSelect = document.getElementById('appType');
+      const appTypeText = appTypeSelect.options[appTypeSelect.selectedIndex].text;
+      const code = 'TGCG-NDA-' + Math.floor(100000 + Math.random() * 900000);
+
+      const resBox = document.getElementById('submissionResult');
+      resBox.style.display = 'block';
+      resBox.innerHTML = `
+        <h3 style="color: #6ee7b7; font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 8px;">
+          ✔ Đệ trình Hồ sơ Thành công! Mã định danh: <span style="color: var(--gold-light);">${code}</span>
+        </h3>
+        <p style="color: #e2e8f0; font-size: 0.92rem; margin-bottom: 8px;">
+          Hồ sơ của <strong>${org}</strong> thuộc phân mục <em>"${appTypeText}"</em> đã được mã hóa và đồng bộ vào Cổng CRM/ERP của <strong>CÔNG TY CỔ PHẦN TRẦN GIA CAPITAL GROUP (TGCG)</strong>.
+        </p>
+        <p style="color: var(--text-muted); font-size: 0.85rem;">
+          Hội đồng Thẩm định sẽ phản hồi qua Email công vụ và số điện thoại đăng ký trong vòng 24 giờ làm việc. Hotline hỗ trợ trực tiếp: <strong>0847770668</strong>.
+        </p>
+      `;
+      resBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+</body>
+</html>

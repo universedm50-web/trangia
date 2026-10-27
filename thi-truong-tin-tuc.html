@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thị Trường Chứng Khoán, Tin Tức Quỹ & CMS Tập Đoàn | Trần Gia Capital Group</title>
+  <meta name="description" content="Bảng Điện tử Chứng khoán & Chỉ số Vốn Toàn cầu, Chuyên mục Tin tức Quỹ (Fund News), Phân tích Thị trường & ESG, và Hệ thống CMS Tự viết chuẩn SEO song ngữ Anh - Việt của TGCG." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Stock Ticker Tape */
+    .ticker-wrap {
+      background: #020812;
+      border-top: 1px solid var(--border-gold);
+      border-bottom: 1px solid var(--border-gold);
+      padding: 12px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: var(--font-mono);
+      font-size: 0.84rem;
+    }
+    .ticker-move {
+      display: inline-block;
+      animation: tickerSlide 32s linear infinite;
+    }
+    .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-right: 36px;
+    }
+    .up { color: #10b981; }
+    .down { color: #f43f5e; }
+    @keyframes tickerSlide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    /* Electronic Stock Board */
+    .stock-board {
+      background: #030a16;
+      border: 1px solid var(--gold-primary);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-luxury);
+    }
+    .stock-board-header {
+      background: linear-gradient(90deg, #071932, #0d2b52);
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-gold);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .cms-toolbar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 10px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border-gold);
+      border-bottom: none;
+      border-radius: 8px 8px 0 0;
+    }
+    .cms-tool-btn {
+      background: rgba(4, 13, 26, 0.8);
+      border: 1px solid var(--border-subtle);
+      color: var(--gold-light);
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .cms-tool-btn:hover {
+      background: var(--gold-primary);
+      color: #040d1a;
+    }
+    .cms-editor-area {
+      min-height: 180px;
+      padding: 16px;
+      background: rgba(4, 13, 26, 0.85);
+      border: 1px solid var(--border-gold);
+      border-radius: 0 0 8px 8px;
+      color: #fff;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="app-header"></div>
+
+  <!-- LIVE FINANCIAL TICKER TAPE -->
+  <div class="ticker-wrap">
+    <div class="ticker-move" id="liveTickerTape">
+      <span class="ticker-item"><strong>TGCG-FUND (NAV)</strong> <span>$148.60</span> <span class="up">▲ +2.85%</span></span>
+      <span class="ticker-item"><strong>BLUE-CARBON-CR</strong> <span>$92.40/tCO2</span> <span class="up">▲ +4.12%</span></span>
+      <span class="ticker-item"><strong>GREEN-BOND-2030</strong> <span>104.25</span> <span class="up">▲ +1.15%</span></span>
+      <span class="ticker-item"><strong>VN-INDEX</strong> <span>1,318.45</span> <span class="up">▲ +0.92%</span></span>
+      <span class="ticker-item"><strong>S&P GLOBAL CLEAN ENERGY</strong> <span>1,482.10</span> <span class="up">▲ +1.64%</span></span>
+      <span class="ticker-item"><strong>DOW JONES SUSTAINABILITY</strong> <span>512.80</span> <span class="up">▲ +1.08%</span></span>
+      <span class="ticker-item"><strong>MEKONG-INFRA-PPP</strong> <span>$50.0B CAP</span> <span class="up">▲ AAA RATING</span></span>
+      <!-- Duplicate for seamless loop -->
+      <span class="ticker-item"><strong>TGCG-FUND (NAV)</strong> <span>$148.60</span> <span class="up">▲ +2.85%</span></span>
+      <span class="ticker-item"><strong>BLUE-CARBON-CR</strong> <span>$92.40/tCO2</span> <span class="up">▲ +4.12%</span></span>
+      <span class="ticker-item"><strong>GREEN-BOND-2030</strong> <span>104.25</span> <span class="up">▲ +1.15%</span></span>
+      <span class="ticker-item"><strong>VN-INDEX</strong> <span>1,318.45</span> <span class="up">▲ +0.92%</span></span>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a> <span class="sep">/</span> <span>Thị trường Chứng khoán, Tin tức Quỹ & CMS Tập đoàn</span>
+      </div>
+      <span class="section-tag emerald">Module 10 • Nhịp Đập Thị Trường Vốn Toàn Cầu & Quản Trị Tin Tức</span>
+      <h1 class="section-title">Bảng Điện Tử Chứng Khoán, <span class="gold-text">Tin Tức Quỹ & CMS Tập Đoàn</span></h1>
+      <p class="section-desc">
+        Chuyển dịch hoàn toàn sang tâm thế <strong>“Theo dõi sức khỏe tài chính và nhịp đập thị trường vốn toàn cầu”</strong> phục vụ trực tiếp giới đầu tư tài chính, các quỹ ngoại và định chế ESG quốc tế.
+      </p>
+    </div>
+  </section>
+
+  <!-- 1. BẢNG ĐIỆN TỬ CHỨNG KHOÁN & CHỈ SỐ QUỸ TRẦN GIA CAPITAL -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="stock-board">
+        <div class="stock-board-header">
+          <div>
+            <span class="badge-pill badge-emerald" style="margin-bottom: 4px;">● LIVE MARKET TERMINAL • REAL-TIME SIMULATION</span>
+            <h2 style="font-family: var(--font-serif); font-size: 1.8rem; color: #fff;">
+              Bảng Điện Tử Chỉ Số Quỹ Thành Viên TGCG, Tín Chỉ Carbon & Thị Trường Quốc Tế
+            </h2>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--gold-light);">
+            Cập nhật tự động mỗi 3 giây • Chuẩn dữ liệu Financial ESG
+          </div>
+        </div>
+
+        <div class="table-responsive" style="border: none; border-radius: 0;">
+          <table class="luxury-table" style="font-family: var(--font-mono); font-size: 0.85rem;">
+            <thead>
+              <tr>
+                <th>Mã Định Danh</th>
+                <th>Tên Quỹ / Chỉ Số Tài Chính & Hạ Tầng</th>
+                <th>Giá Tham Chiếu</th>
+                <th>Khớp Lệnh Hiện Tại</th>
+                <th>Biến Động (+/-)</th>
+                <th>Quy Mô Vốn / KLGD</th>
+                <th>Tín Hiệu ESG</th>
+              </tr>
+            </thead>
+            <tbody id="stockBoardBody">
+              <tr>
+                <td><strong style="color: var(--gold-light);">TGC-CAP</strong></td>
+                <td>Tran Gia Capital M&A & Strategic Fund</td>
+                <td>144.50</td>
+                <td class="up js-price" data-base="148.60"><strong>148.60</strong></td>
+                <td class="up">+4.10 (+2.84%)</td>
+                <td>15.50 Tỷ USD</td>
+                <td><span class="badge-pill badge-emerald">AAA • Net Zero</span></td>
+              </tr>
+              <tr>
+                <td><strong style="color: var(--gold-light);">TGC-FMG</strong></td>
+                <td>Tran Gia Global Green Finance Fund</td>
+                <td>112.00</td>
+                <td class="up js-price" data-base="115.40"><strong>115.40</strong></td>
+                <td class="up">+3.40 (+3.04%)</td>
+                <td>12.80 Tỷ USD</td>
+                <td><span class="badge-pill badge-emerald">Green Bond A+</span></td>
+              </tr>
+              <tr>
+                <td><strong style="color: #6ee7b7;">BLUE-CBN</strong></td>
+                <td>Mekong Mangrove 900ha Blue Carbon Index</td>
+                <td>88.75</td>
+                <td class="up js-price" data-base="92.40"><strong>92.40</strong></td>
+                <td class="up">+3.65 (+4.11%)</td>
+                <td>2.50 Tỷ USD</td>
+                <td><span class="badge-pill badge-emerald">-120k tCO2/yr</span></td>
+              </tr>
+              <tr>
+                <td><strong style="color: #67e8f9;">TGC-ENE</strong></td>
+                <td>Green Energy City (Wind 600MW & Hydrogen)</td>
+                <td>98.20</td>
+                <td class="up js-price" data-base="101.15"><strong>101.15</strong></td>
+                <td class="up">+2.95 (+3.00%)</td>
+                <td>4.80 Tỷ USD</td>
+                <td><span class="badge-pill badge-cyan">100% Renewable</span></td>
+              </tr>
+              <tr>
+                <td><strong style="color: var(--gold-light);">TGC-HOS</strong></td>
+                <td>Ultra-Luxury 7-Star Hospitality REIT</td>
+                <td>205.00</td>
+                <td class="up js-price" data-base="211.80"><strong>211.80</strong></td>
+                <td class="up">+6.80 (+3.32%)</td>
+                <td>8.50 Tỷ USD</td>
+                <td><span class="badge-pill badge-gold">7-Star ESG</span></td>
+              </tr>
+              <tr>
+                <td><strong style="color: #67e8f9;">TGC-MAR</strong></td>
+                <td>Marina Port 150,000 DWT & Sky Aviation Infra</td>
+                <td>76.40</td>
+                <td class="up js-price" data-base="78.90"><strong>78.90</strong></td>
+                <td class="up">+2.50 (+3.27%)</td>
+                <td>6.50 Tỷ USD</td>
+                <td><span class="badge-pill badge-cyan">PPP Core Infra</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. PHÂN LOẠI DANH MỤC TIN TỨC RÕ RÀNG: TIN TỨC QUỸ | TIN TẬP ĐOÀN | PHÂN TÍCH THỊ TRƯỜNG & ESG -->
+  <section class="section-padding" style="background: rgba(7, 22, 44, 0.5); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; margin-bottom: 32px;">
+        <div>
+          <span class="section-tag">Trung Tâm Thông Tin Tài Chính & Báo Chí</span>
+          <h2 class="section-title" style="margin-bottom: 0;">Chuyên Mục Tin Tức Quỹ & <span class="gold-text">Phân Tích Thị Trường ESG</span></h2>
+        </div>
+        <a href="#cms-editor-section" class="btn btn-gold">✍️ Mở Công Cụ CMS Xuất Bản Bài Viết Mới ↓</a>
+      </div>
+
+      <div class="filter-bar" id="newsFilterBar">
+        <button class="filter-btn active" onclick="filterNews('all', this)">Tất cả Chuyên mục</button>
+        <button class="filter-btn" onclick="filterNews('FUND', this)">Tin tức Quỹ (Fund News)</button>
+        <button class="filter-btn" onclick="filterNews('CORP', this)">Tin Tập đoàn (Corporate PR)</button>
+        <button class="filter-btn" onclick="filterNews('ESG', this)">Phân tích Thị trường & ESG</button>
+      </div>
+
+      <div class="grid-3" id="newsArticlesGrid">
+        <!-- Bài 1 -->
+        <article class="luxury-card news-card" data-ncat="FUND">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.78rem;">
+            <span class="badge-pill badge-gold">Tin tức Quỹ (Fund News)</span>
+            <span style="color: var(--text-muted);">VN / EN • Q4/2026</span>
+          </div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.55rem; color: #fff; margin-bottom: 10px;">
+            Báo Cáo Chiến Lược Phân Bổ Dòng Vốn FDI 50 Tỷ USD Vào Đại Dự Án The Breath of Mekong Sea
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">
+            Tran Gia Capital JSC và Tran Gia Fund Management công bố khung hợp tác đồng tài trợ cho 14 phân khu chức năng với mục tiêu doanh thu vận hành đạt 15–18 tỷ USD/năm.
+          </p>
+          <span style="color: var(--gold-light); font-size: 0.82rem; font-weight: 600;">Tác giả: Hội đồng Quản lý Quỹ TGCG</span>
+        </article>
+
+        <!-- Bài 2 -->
+        <article class="luxury-card news-card" data-ncat="ESG">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.78rem;">
+            <span class="badge-pill badge-emerald">Phân tích Thị trường & ESG</span>
+            <span style="color: var(--text-muted);">VN / EN • Q4/2026</span>
+          </div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.55rem; color: #fff; margin-bottom: 10px;">
+            Định Giá Tín Chỉ Blue Carbon Từ 900ha Rừng Ngập Mặn & Mức Giảm 250.000 Tấn CO2/Năm
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">
+            Phân tích chuyên sâu về cơ chế thương mại hóa tín chỉ Carbon biển kết hợp tổ hợp Điện gió ngoài khơi 600MW và Hydrogen xanh 12ha tại Green Energy City.
+          </p>
+          <span style="color: #6ee7b7; font-size: 0.82rem; font-weight: 600;">Tác giả: Viện Năng lượng & ESG TGCG</span>
+        </article>
+
+        <!-- Bài 3 -->
+        <article class="luxury-card news-card" data-ncat="CORP">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.78rem;">
+            <span class="badge-pill badge-cyan">Tin Tập đoàn</span>
+            <span style="color: var(--text-muted);">VN / EN • Q4/2026</span>
+          </div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.55rem; color: #fff; margin-bottom: 10px;">
+            Trần Gia Capital Group Đón Tiếp Liên Minh Các Định Chế Tài Chính Quốc Tế Tại Văn Phòng 35 Hùng Vương
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">
+            Lễ ký kết biên bản ghi nhớ MOU và thỏa thuận bảo mật NDA triển khai tổ hợp Durian Crown Tower 68 tầng và Cảng biển quốc tế 150.000 DWT theo chuẩn PPP/FDI.
+          </p>
+          <span style="color: #67e8f9; font-size: 0.82rem; font-weight: 600;">Tác giả: Ban Truyền thông Tập đoàn TGCG</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. HỆ THỐNG TIN TỨC TẬP ĐOÀN (CMS TỰ VIẾT CHUẨN SEO SONG NGỮ ANH - VIỆT) -->
+  <section class="section-padding" id="cms-editor-section">
+    <div class="container">
+      <div class="luxury-card" style="padding: 38px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 24px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 18px;">
+          <div>
+            <span class="section-tag emerald">TGCG Internal CMS • Rich-Text Editor Chuẩn SEO</span>
+            <h2 style="font-family: var(--font-serif); font-size: 2rem; color: #fff;">
+              Hệ Thống Quản Trị & Xuất Bản Tin Tức Tập Đoàn Tự Viết (Song Ngữ VN / EN)
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+              Công cụ để đội ngũ nội bộ TGCG chủ động biên tập, kiểm tra điểm chuẩn SEO và xuất bản bài viết, thông cáo báo chí trực tiếp lên hệ thống.
+            </p>
+          </div>
+          <div class="badge-pill badge-gold" id="seoScoreBadge" style="padding: 10px 16px; font-size: 0.85rem;">
+            ✔ Điểm SEO: 96/100 (Chuẩn Quốc Tế)
+          </div>
+        </div>
+
+        <form onsubmit="publishCMSArticle(event)">
+          <div class="grid-3">
+            <div class="form-group">
+              <label class="form-label">1. Chuyên mục Xuất bản *</label>
+              <select class="form-control" id="cmsCategory" required>
+                <option value="FUND">Tin tức Quỹ (Fund News)</option>
+                <option value="CORP">Tin Tập đoàn (Corporate PR)</option>
+                <option value="ESG">Phân tích Thị trường & ESG</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">2. Ngôn ngữ Xuất bản *</label>
+              <select class="form-control" id="cmsLang" required>
+                <option value="VN / EN (Song ngữ)">Song ngữ Anh – Việt (VN / EN)</option>
+                <option value="Tiếng Việt (VN)">Tiếng Việt (VN)</option>
+                <option value="English (EN)">English (EN)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">3. Từ khóa SEO Trọng tâm (Focus Keyword) *</label>
+              <input type="text" class="form-control" id="cmsKeyword" value="Trần Gia Capital Group, Quỹ FDI 50 tỷ USD, ESG" required />
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="form-group">
+              <label class="form-label">4. Tiêu đề Bài viết / Thông cáo Báo chí (Tiếng Việt) *</label>
+              <input type="text" class="form-control" id="cmsTitleVN" placeholder="Nhập tiêu đề bài viết chuẩn SEO..." required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">5. Tiêu đề Bài viết Quốc tế (English Title)</label>
+              <input type="text" class="form-control" id="cmsTitleEN" placeholder="Enter English headline for international funds..." />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">6. Trình Soạn Thảo Rich-Text Chuẩn SEO *</label>
+            <div class="cms-toolbar">
+              <button type="button" class="cms-tool-btn" onclick="formatCMS('bold')"><b>B</b> In đậm</button>
+              <button type="button" class="cms-tool-btn" onclick="formatCMS('italic')"><i>I</i> In nghiêng</button>
+              <button type="button" class="cms-tool-btn" onclick="formatCMS('underline')"><u>U</u> Gạch chân</button>
+              <button type="button" class="cms-tool-btn" onclick="formatCMS('insertUnorderedList')">• Danh sách</button>
+              <button type="button" class="cms-tool-btn" onclick="insertESGTemplate()">+ Chèn Khối Thông Số Quỹ 50 Tỷ USD</button>
+            </div>
+            <div id="cmsRichContent" class="cms-editor-area" contenteditable="true">
+              <p><strong>Thông cáo báo chí chính thức từ CÔNG TY CỔ PHẦN TRẦN GIA CAPITAL GROUP (TGCG):</strong></p>
+              <p>Quỹ Tập đoàn tiếp tục mở rộng danh mục thu hút dòng vốn Green Finance và FDI quốc tế cho các hợp đồng thành phần thuộc đại dự án The Breath of Mekong Sea (4.000ha)...</p>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 14px;">
+            <button type="submit" class="btn btn-gold">
+              📰 Xuất Bản Bài Viết Lên Chuyên Mục Tin Tức
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div id="app-footer"></div>
+  <script src="js/main.js"></script>
+  <script>
+    // Simulate Live Stock Price Updates every 3 seconds
+    setInterval(() => {
+      document.querySelectorAll('.js-price').forEach(cell => {
+        const base = parseFloat(cell.getAttribute('data-base'));
+        const delta = (Math.random() * 0.8 - 0.25);
+        const newVal = (base + delta).toFixed(2);
+        cell.innerHTML = `<strong>${newVal}</strong>`;
+      });
+    }, 3000);
+
+    function filterNews(cat, btn) {
+      document.querySelectorAll('#newsFilterBar .filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.news-card').forEach(card => {
+        card.style.display = (cat === 'all' || card.getAttribute('data-ncat') === cat) ? 'block' : 'none';
+      });
+    }
+
+    function formatCMS(cmd) {
+      document.execCommand(cmd, false, null);
+    }
+
+    function insertESGTemplate() {
+      const editor = document.getElementById('cmsRichContent');
+      editor.innerHTML += `<p><em>[Trích lục số liệu ESG TGCG: Quy mô 4.000ha | Tổng vốn 50 tỷ USD | Doanh thu dự kiến 15–18 tỷ USD/năm | Giảm phát thải -250.000 tấn CO2/năm]</em></p>`;
+    }
+
+    function publishCMSArticle(e) {
+      e.preventDefault();
+      const cat = document.getElementById('cmsCategory').value;
+      const lang = document.getElementById('cmsLang').value;
+      const titleVN = document.getElementById('cmsTitleVN').value;
+      const titleEN = document.getElementById('cmsTitleEN').value;
+      const bodyHtml = document.getElementById('cmsRichContent').innerText;
+
+      const catLabelMap = {
+        FUND: { text: "Tin tức Quỹ (Fund News)", cls: "badge-gold" },
+        CORP: { text: "Tin Tập đoàn", cls: "badge-cyan" },
+        ESG:  { text: "Phân tích Thị trường & ESG", cls: "badge-emerald" }
+      };
+      const badge = catLabelMap[cat];
+
+      const grid = document.getElementById('newsArticlesGrid');
+      const newCard = document.createElement('article');
+      newCard.className = 'luxury-card news-card';
+      newCard.setAttribute('data-ncat', cat);
+      newCard.style.borderColor = 'var(--gold-primary)';
+      newCard.innerHTML = `
+        <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.78rem;">
+          <span class="badge-pill ${badge.cls}">${badge.text}</span>
+          <span style="color: #6ee7b7;">MỚI XUẤT BẢN • ${lang}</span>
+        </div>
+        <h3 style="font-family: var(--font-serif); font-size: 1.55rem; color: #fff; margin-bottom: 6px;">
+          ${titleVN}
+        </h3>
+        ${titleEN ? `<p style="color: var(--gold-light); font-size: 0.82rem; font-style: italic; margin-bottom: 10px;">EN: ${titleEN}</p>` : ''}
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">
+          ${bodyHtml.substring(0, 220)}...
+        </p>
+        <span style="color: var(--gold-light); font-size: 0.82rem; font-weight: 600;">Xuất bản từ TGCG CMS • Chuẩn SEO</span>
+      `;
+      grid.prepend(newCard);
+      document.getElementById('cmsTitleVN').value = '';
+      document.getElementById('cmsTitleEN').value = '';
+      newCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+</body>
+</html>

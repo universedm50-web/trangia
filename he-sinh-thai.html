@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hệ Sinh Thái, Tầm Nhìn & Hồ Sơ Năng Lực | Trần Gia Capital Group (TGCG)</title>
+  <meta name="description" content="Trải nghiệm Scrollytelling Tầm nhìn & Triết lý ADN Mekong, 4 yếu tố cốt lõi (Dự án, Năng lực, Nhân sự, Tài chính 15-18 tỷ USD/năm), Thành tựu và Đối tác Chiến lược TGCG." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Scrollytelling Chapters Styling */
+    .scrolly-container {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 44px;
+      align-items: start;
+      position: relative;
+    }
+    .scrolly-sticky-visual {
+      position: sticky;
+      top: 110px;
+      background: linear-gradient(145deg, rgba(11, 29, 54, 0.92), rgba(4, 13, 26, 0.96));
+      border: 1px solid var(--gold-primary);
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: var(--shadow-luxury);
+      min-height: 430px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .scrolly-step {
+      padding: 34px;
+      margin-bottom: 32px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      border-left: 4px solid var(--border-gold);
+      transition: var(--transition);
+    }
+    .scrolly-step.active-step,
+    .scrolly-step:hover {
+      background: rgba(212, 175, 55, 0.1);
+      border-color: var(--gold-primary);
+      transform: translateX(6px);
+    }
+    @media (max-width: 1024px) {
+      .scrolly-container { grid-template-columns: 1fr; }
+      .scrolly-sticky-visual { position: static; margin-bottom: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="app-header"></div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a> <span class="sep">/</span> <span>Hệ sinh thái TGCG • Tầm nhìn & Hồ sơ Năng lực</span>
+      </div>
+      <span class="section-tag">Module 04 • Khung Năng Lực Tập Đoàn Đa Quốc Gia</span>
+      <h1 class="section-title">Tầm Nhìn, Hệ Sinh Thái & <span class="gold-text">Hồ Sơ Năng Lực TGCG</span></h1>
+      <p class="section-desc">
+        Hoàn thiện toàn bộ khung năng lực chuẩn của một Tập đoàn Đa quốc gia, tạo sự tin cậy tuyệt đối với Chính phủ, Bộ ngành và các đối tác liên minh quốc tế.
+      </p>
+    </div>
+  </section>
+
+  <!-- 1. TẦM NHÌN & TRIẾT LÝ (INTERACTIVE SCROLLYTELLING) -->
+  <section class="section-padding" id="scrolly-vision">
+    <div class="container">
+      <div style="margin-bottom: 48px;">
+        <span class="section-tag emerald">1. Tầm Nhìn & Triết Lý (Interactive Scrollytelling)</span>
+        <h2 class="section-title">Hành Trình Kiến Tạo Biểu Tượng <span class="gold-text">ADN Mekong Đầu Tiên Trên Toàn Cầu</span></h2>
+        <p class="section-desc">
+          Cuộn trang hoặc di chuột qua từng chương bên phải để trải nghiệm câu chuyện chuyển hóa từ mạch nguồn phù sa Cửu Long đến đại quần thể sinh thái biển 50 tỷ USD.
+        </p>
+      </div>
+
+      <div class="scrolly-container">
+        <!-- Sticky Left Visual Box -->
+        <div class="scrolly-sticky-visual" id="scrollyVisualBox">
+          <div>
+            <span class="badge-pill badge-gold" id="scrollyChapterTag">CHƯƠNG 01 / 04 • KHỞI NGUỒN ADN MEKONG</span>
+            <h3 style="font-family: var(--font-serif); font-size: 2.1rem; color: #fff; margin: 14px 0 10px;" id="scrollyVisualTitle">
+              Từ Dòng Chảy Cửu Long Đến Khát Vọng Đại Dương
+            </h3>
+            <p style="color: #cbd5e1; font-size: 0.95rem;" id="scrollyVisualDesc">
+              Tái tạo thiên nhiên và bảo tồn văn hóa bản địa thay vì công nghiệp hóa thiên nhiên. Mỗi công trình là một cơ thể sống hài hòa với biển và rừng ngập mặn.
+            </p>
+          </div>
+
+          <div style="my: 24px; padding: 24px; border-radius: 14px; background: rgba(4, 13, 26, 0.7); border: 1px solid var(--border-gold); text-align: center;">
+            <div style="font-family: var(--font-serif); font-size: 2.8rem; color: var(--gold-light); font-weight: 700;" id="scrollyMetricValue">
+              4.000 Ha • 50 Tỷ USD
+            </div>
+            <div style="font-size: 0.85rem; color: #6ee7b7; text-transform: uppercase; letter-spacing: 1.5px;" id="scrollyMetricSub">
+              Quy mô Đại Quần Thể Sinh Thái Biển Bền Vững
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-muted);">
+            <span>Triết lý Kiến trúc: Organic Parametric 3D</span>
+            <span style="color: var(--gold-light);">Chuẩn ESG & Net Zero 2050</span>
+          </div>
+        </div>
+
+        <!-- Right Scrollytelling Chapters -->
+        <div>
+          <div class="scrolly-step active-step"
+               onmouseenter="updateScrolly(1, 'CHƯƠNG 01 / 04 • KHỞI NGUỒN ADN MEKONG', 'Từ Dòng Chảy Cửu Long Đến Khát Vọng Đại Dương', 'Tái tạo thiên nhiên và bảo tồn văn hóa bản địa thay vì công nghiệp hóa thiên nhiên. Mỗi công trình là một cơ thể sống hài hòa với biển và rừng ngập mặn.', '4.000 Ha • 50 Tỷ USD', 'Quy mô Đại Quần Thể Sinh Thái Biển Bền Vững')">
+            <span style="color: var(--gold-primary); font-family: var(--font-mono); font-size: 0.8rem;">CHƯƠNG I • TRIẾT LÝ SINH THÁI TÁI TẠO</span>
+            <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: #fff; margin: 8px 0;">
+              Tái Tạo Thiên Nhiên Thay Vì Công Nghiệp Hóa Thiên Nhiên
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.94rem;">
+              Khác biệt hoàn toàn với các mô hình đô thị bê tông hóa, TGCG dành hơn 900ha cho khu bảo tồn rừng ngập mặn Mekong, hấp thụ trên 120.000 tấn CO2/năm, kết hợp vùng đệm sinh thái biển và giao thông 100% không phát thải.
+            </p>
+          </div>
+
+          <div class="scrolly-step"
+               onmouseenter="updateScrolly(2, 'CHƯƠNG 02 / 04 • KIẾN TRÚC QUẢ SẦU RIÊNG KÍNH 3D', 'Organic Parametric – Biểu Tượng Vua Của Các Loại Trái Cây Mekong', 'Lấy cảm hứng từ cấu trúc gai và múi quả sầu riêng Nam Bộ, 7 tòa nhà biểu tượng sử dụng hệ mặt dựng kính pha lê 3D Solar hấp thụ bức xạ mặt trời.', '68 Tầng • 480m', 'Tháp Biểu Tượng Durian Crown Tower 7 Sao')">
+            <span style="color: var(--gold-primary); font-family: var(--font-mono); font-size: 0.8rem;">CHƯƠNG II • KIẾN TRÚC SINH HỌC PARAMETRIC</span>
+            <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: #fff; margin: 8px 0;">
+              ADN Quả Sầu Riêng Kính Pha Lê 3D Độc Bản Toàn Cầu
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.94rem;">
+              Cấu trúc vỏ quả sầu riêng được giải mã bằng thuật toán Parametric tạo nên hệ khung vòm chịu lực vượt nhịp, vừa đón gió biển tự nhiên vừa tích hợp tấm kính quang điện Solar thế hệ mới cho Durian Crown Tower 68 tầng và 3.500 biệt thự nổi.
+            </p>
+          </div>
+
+          <div class="scrolly-step"
+               onmouseenter="updateScrolly(3, 'CHƯƠNG 03 / 04 • TỰ CHỦ 100% NĂNG LƯỢNG & TUẦN HOÀN', 'Đô Thị Không Khói – 100% Năng Lượng Xanh & 0% Chôn Lấp', 'Green Energy City 200ha cung cấp điện gió ngoài khơi 600MW, Solar 320MW, Hydrogen xanh 12ha và tái chế 1.000 tấn rác/ngày thành điện năng.', '-250.000 Tấn CO2/Năm', 'Chỉ Số Giảm Phát Thải Toàn Quần Thể')">
+            <span style="color: var(--gold-primary); font-family: var(--font-mono); font-size: 0.8rem;">CHƯƠNG III • KINH TẾ TUẦN HOÀN NET ZERO</span>
+            <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: #fff; margin: 8px 0;">
+              Vận Hành Bằng Trí Tuệ Nhân Tạo SCADA & Năng Lượng Tái Tạo
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.94rem;">
+              Mọi giọt nước thải (50.000 m³/ngày) đều được lọc qua hệ thống MBR & RO biển sâu để tái sử dụng; mọi tấn rác thải đều được xử lý bằng công nghệ Plasma & Biomass ngay tại nguồn.
+            </p>
+          </div>
+
+          <div class="scrolly-step"
+               onmouseenter="updateScrolly(4, 'CHƯƠNG 04 / 04 • DI SẢN UNESCO & DÒNG VỐN TOÀN CẦU', 'Điểm Hội Tụ Của Dòng Vốn FDI, PPP & Di Sản Nhân Loại', 'Tôn vinh văn hóa 63 tỉnh thành và Đờn ca tài tử Nam Bộ, đồng thời mang lại doanh thu bền vững 15–18 tỷ USD/năm cho các nhà đầu tư chiến lược.', '15 – 18 Tỷ USD / Năm', 'Doanh Thu Khai Thác Dự Kiến Toàn Hệ Sinh Thái')">
+            <span style="color: var(--gold-primary); font-family: var(--font-mono); font-size: 0.8rem;">CHƯƠNG IV • TẦM VÓC TÀI CHÍNH & DI SẢN 100 NĂM</span>
+            <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: #fff; margin: 8px 0;">
+              Định Chế Dẫn Dắt Dòng Vốn Xanh Quốc Tế Vào Việt Nam
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.94rem;">
+              Kết hợp hoàn hảo giữa bảo tồn di sản văn hóa Mekong hướng tới hồ sơ UNESCO và hiệu quả tài chính vượt trội với doanh thu dự kiến 15–18 tỷ USD/năm.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. BỐN YẾU TỐ CỐT LÕI CỦA WEB CÔNG TY: DỰ ÁN - NĂNG LỰC - NHÂN SỰ - TÀI CHÍNH -->
+  <section class="section-padding" id="nhan-su" style="background: rgba(7, 22, 44, 0.5); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 48px;">
+        <span class="section-tag">2. Bốn Yếu Tố Cốt Lõi Của Tập Đoàn</span>
+        <h2 class="section-title">Dự Án • Năng Lực • Nhân Sự • <span class="gold-text">Tài Chính Vĩ Mô</span></h2>
+        <p class="section-desc">
+          Nền tảng thực thi vững chắc bảo chứng cho khả năng triển khai các siêu dự án FDI, PPP quy mô hàng chục tỷ USD của Trần Gia Capital Group.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Yếu tố 1: Dự án -->
+        <div class="luxury-card">
+          <span class="badge-pill badge-gold" style="margin-bottom: 12px;">YẾU TỐ 01 • DANH MỤC DỰ ÁN</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.75rem; color: #fff; margin-bottom: 10px;">
+            Hệ Thống Đại Dự Án Sinh Thái Bền Vững 4.000 Ha
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 16px;">
+            Quy hoạch tổng thể 14 phân khu chức năng biển – đảo – rừng ngập mặn với 7 tòa nhà biểu tượng mang ADN quả sầu riêng kính 3D:
+          </p>
+          <ul style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.8;">
+            <li>• <strong>Durian Crown Tower (8.5B USD):</strong> Khách sạn 7 sao 68 tầng nổi trên biển.</li>
+            <li>• <strong>Floating Eco Villas (7.0B USD):</strong> 3.500 biệt thự nổi phòng ngủ ngầm dưới biển.</li>
+            <li>• <strong>Green Energy City (4.8B USD) & Marina Port (4.5B USD).</strong></li>
+            <li>• <strong>Education & Medical City (4.0B USD) & Durian Arena (3.2B USD).</strong></li>
+          </ul>
+        </div>
+
+        <!-- Yếu tố 2: Năng lực -->
+        <div class="luxury-card">
+          <span class="badge-pill badge-emerald" style="margin-bottom: 12px;">YẾU TỐ 02 • NĂNG LỰC THỰC THI</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.75rem; color: #fff; margin-bottom: 10px;">
+            Triển Khai Siêu Dự Án FDI, PPP & Khép Kín 10 Công Ty Con
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 16px;">
+            Năng lực tự chủ toàn diện từ lập quy hoạch 1/5000 – 1/500, thu xếp vốn quốc tế, tổng thầu thi công BIM 5D đến vận hành khách sạn 7 sao:
+          </p>
+          <ul style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.8;">
+            <li>• <strong>Mô hình PPP:</strong> Hạ tầng giao thông, cảng biển 150.000 DWT, năng lượng sạch.</li>
+            <li>• <strong>Mô hình FDI:</strong> Khu nghỉ dưỡng 7 sao, Casino 80.000m², công nghệ xanh.</li>
+            <li>• <strong>10 Công ty thành viên:</strong> Phối hợp nhịp nhàng theo chuẩn quản trị ERP quốc tế.</li>
+          </ul>
+        </div>
+
+        <!-- Yếu tố 3: Nhân sự -->
+        <div class="luxury-card">
+          <span class="badge-pill badge-cyan" style="margin-bottom: 12px;">YẾU TỐ 03 • NHÂN SỰ CHIẾN LƯỢC</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.75rem; color: #fff; margin-bottom: 10px;">
+            Hội Đồng Quản Trị, Ban Cố Vấn Quốc Tế & Chuyên Gia Đầu Ngành
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 16px;">
+            Quy tụ đội ngũ lãnh đạo và chuyên gia quốc tế giàu kinh nghiệm thực chiến tại các trung tâm tài chính và siêu dự án toàn cầu:
+          </p>
+          <ul style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.8;">
+            <li>• <strong>Hội đồng Quản trị & Cố vấn Quốc tế:</strong> Các định chế tài chính & quy hoạch đô thị.</li>
+            <li>• <strong>Chuyên gia AI & Smart City:</strong> Vận hành trung tâm SCADA & Digital Twin Energy.</li>
+            <li>• <strong>Chuyên gia Năng lượng & Quản lý Khách sạn 7 sao:</strong> Chuẩn Ultra Luxury toàn cầu.</li>
+          </ul>
+        </div>
+
+        <!-- Yếu tố 4: Tài chính -->
+        <div class="luxury-card">
+          <span class="badge-pill badge-gold" style="margin-bottom: 12px;">YẾU TỐ 04 • NĂNG LỰC TÀI CHÍNH</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.75rem; color: #fff; margin-bottom: 10px;">
+            Cấu Trúc Vốn 50 Tỷ USD & Doanh Thu Dự Kiến 15 – 18 Tỷ USD/Năm
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 16px;">
+            Nền tảng vốn chủ sở hữu vững mạnh kết hợp cơ chế đồng tài trợ từ các Quỹ Đầu tư Quốc tế, Quỹ Tài chính Xanh (Green Finance) và Tín chỉ Blue Carbon:
+          </p>
+          <ul style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.8;">
+            <li>• <strong>Tổng vốn đầu tư toàn khu:</strong> 50 Tỷ USD (Phân bổ minh bạch cho 14 phân khu).</li>
+            <li>• <strong>Doanh thu dự kiến hàng năm:</strong> <strong>15 – 18 Tỷ USD/năm</strong> khi vận hành toàn diện.</li>
+            <li>• <strong>Kiểm toán & Quản trị rủi ro:</strong> Tuân thủ chuẩn IFRS và tiêu chuẩn ESG quốc tế.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. TRANG THÀNH TỰU CÔNG TY -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 44px;">
+        <span class="section-tag">3. Thành Tựu & Chứng Nhận Quốc Tế</span>
+        <h2 class="section-title">Các Cột Mốc Định Hình & <span class="gold-text">Chứng Nhận Quy Hoạch Xanh</span></h2>
+      </div>
+
+      <div class="grid-4">
+        <div class="luxury-card" style="text-align: center;">
+          <div style="font-size: 2.2rem; margin-bottom: 10px;">🏆</div>
+          <span class="badge-pill badge-gold">CHỨNG NHẬN QUỐC TẾ</span>
+          <h4 style="font-family: var(--font-serif); font-size: 1.35rem; color: #fff; margin: 10px 0;">
+            Master Plan Chuẩn Net Zero 2050
+          </h4>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">
+            Đạt chuẩn quy hoạch đô thị sinh thái biển trung hòa Carbon 100% với hệ thống năng lượng tái tạo khép kín.
+          </p>
+        </div>
+
+        <div class="luxury-card" style="text-align: center;">
+          <div style="font-size: 2.2rem; margin-bottom: 10px;">🌿</div>
+          <span class="badge-pill badge-emerald">BLUE CARBON ESG</span>
+          <h4 style="font-family: var(--font-serif); font-size: 1.35rem; color: #fff; margin: 10px 0;">
+            Bảo Tồn 900ha Rừng Ngập Mặn
+          </h4>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">
+            Định hình khu dự trữ sinh quyển & phục hồi Blue Carbon hấp thụ hơn 120.000 tấn CO2 mỗi năm.
+          </p>
+        </div>
+
+        <div class="luxury-card" style="text-align: center;">
+          <div style="font-size: 2.2rem; margin-bottom: 10px;">💎</div>
+          <span class="badge-pill badge-cyan">KIẾN TRÚC BIỂU TƯỢNG</span>
+          <h4 style="font-family: var(--font-serif); font-size: 1.35rem; color: #fff; margin: 10px 0;">
+            Giải Thưởng Organic Parametric 3D
+          </h4>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">
+            Tiên phong ứng dụng kết cấu kính pha lê 3D hình thái quả sầu riêng cho 7 công trình biểu tượng biển.
+          </p>
+        </div>
+
+        <div class="luxury-card" style="text-align: center;">
+          <div style="font-size: 2.2rem; margin-bottom: 10px;">🏛️</div>
+          <span class="badge-pill badge-gold">ĐỊNH HƯỚNG UNESCO</span>
+          <h4 style="font-family: var(--font-serif); font-size: 1.35rem; color: #fff; margin: 10px 0;">
+            Hồ Sơ Di Sản Văn Hóa Mekong
+          </h4>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">
+            Xây dựng nền tảng hồ sơ UNESCO tôn vinh văn hóa sông nước, chợ nổi và Đờn ca tài tử Nam Bộ.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. TRANG NĂNG LỰC ĐỐI TÁC CHIẾN LƯỢC (PHÂN LOẠI THEO NHÓM NGÀNH) -->
+  <section class="section-padding" style="background: rgba(7, 22, 44, 0.45); border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 36px;">
+        <span class="section-tag emerald">4. Liên Minh Đối Tác Toàn Cầu</span>
+        <h2 class="section-title">Năng Lực <span class="gold-text">Đối Tác Chiến Lược Quốc Tế</span></h2>
+        <p class="section-desc">
+          Phân loại hệ thống đối tác chiến lược theo nhóm ngành: Vận hành Khách sạn 7 sao, Kiến trúc Parametric & BIM, Công nghệ AI/Smart City, Tài chính & Hàng hải – Hàng không.
+        </p>
+      </div>
+
+      <div class="filter-bar" id="partnerFilterBar" style="justify-content: center;">
+        <button class="filter-btn active" onclick="filterPartners('all', this)">Tất cả Nhóm ngành</button>
+        <button class="filter-btn" onclick="filterPartners('hospitality', this)">Vận hành Khách sạn 7 Sao</button>
+        <button class="filter-btn" onclick="filterPartners('arch', this)">Kiến trúc Parametric & BIM</button>
+        <button class="filter-btn" onclick="filterPartners('tech', this)">Công nghệ AI / Smart City & Hàng hải</button>
+        <button class="filter-btn" onclick="filterPartners('finance', this)">Tài chính & Quỹ Quốc tế</button>
+      </div>
+
+      <div class="grid-3" id="partnerGrid">
+        <div class="luxury-card partner-card" data-pcat="hospitality">
+          <span class="badge-pill badge-gold">NHÓM VẬN HÀNH & QUẢN LÝ 7 SAO</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: #fff; margin: 10px 0;">
+            Liên Minh Quản Lý Khách Sạn & Resort 7 Sao Ultra Luxury
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Hợp tác cùng Tran Gia Hospitality & Tran Gia Hotel Management vận hành 2.500 phòng khách sạn Durian Crown Tower, 320 Sky Villas, 3.500 biệt thự nổi và sân Golf 36 hố chuẩn PGA.
+          </p>
+        </div>
+
+        <div class="luxury-card partner-card" data-pcat="arch">
+          <span class="badge-pill badge-cyan">NHÓM KIẾN TRÚC & KẾT CẤU BIỂN</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: #fff; margin: 10px 0;">
+            Tập Đoàn Thiết Kế Organic Parametric & Công Nghệ BIM 5D
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Thiết kế kết cấu vòm kính 3D Durian Crystal chịu bão biển cấp độ siêu trường, công nghệ móng nổi sinh thái và phòng ngủ ngầm xuyên thấu dưới lòng đại dương.
+          </p>
+        </div>
+
+        <div class="luxury-card partner-card" data-pcat="tech">
+          <span class="badge-pill badge-emerald">NHÓM CÔNG NGHỆ AI & SMART CITY</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: #fff; margin: 10px 0;">
+            Đối Tác AI, Digital Twin Energy, SCADA & Bảo Tàng Hologram
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Phát triển hệ điều hành đô thị thông minh SCADA, lưới điện Hydrogen xanh, ghe điện AI chợ nổi và công nghệ thực tế ảo VR/AR tại Bảo tàng Di sản Mekong.
+          </p>
+        </div>
+
+        <div class="luxury-card partner-card" data-pcat="tech">
+          <span class="badge-pill badge-cyan">NHÓM HÀNG HẢI & HÀNG KHÔNG</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: #fff; margin: 10px 0;">
+            Liên Minh Cảng Du Thuyền 150.000 DWT & Sân Bay Chuyên Cơ
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Phối hợp vận hành Durian Marina Port (800–1.200 siêu du thuyền) và Private Aviation Sky Marina City với đường băng 3.200m, 80 bãi đỗ chuyên cơ cá nhân.
+          </p>
+        </div>
+
+        <div class="luxury-card partner-card" data-pcat="finance">
+          <span class="badge-pill badge-gold">NHÓM TÀI CHÍNH & QUỸ NGOẠI</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: #fff; margin: 10px 0;">
+            Định Chế Tài Chính Xanh (Green Finance) & Quỹ Tín Chỉ Carbon
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Thu xếp nguồn vốn FDI, vốn trái phiếu xanh quốc tế, kiểm toán độc lập chuẩn Big4 và thương mại hóa tín chỉ Blue Carbon trên sàn giao dịch quốc tế.
+          </p>
+        </div>
+
+        <div class="luxury-card partner-card" data-pcat="hospitality">
+          <span class="badge-pill badge-emerald">NHÓM Y TẾ & GIÁO DỤC QUỐC TẾ</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.5rem; color: #fff; margin: 10px 0;">
+            Liên Minh Đại Học Quốc Tế 40.000 SV & Bệnh Viện Biển Xanh
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Hợp tác đào tạo đại học chuẩn quốc tế và vận hành Bệnh viện Biển Xanh 3.500 giường tích hợp y học tái tạo, nghỉ dưỡng trị liệu 7 sao.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DANH SÁCH ĐẦY ĐỦ 10 CÔNG TY THÀNH VIÊN -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 40px;">
+        <span class="section-tag">10 Pháp Nhân Trực Thuộc TGCG</span>
+        <h2 class="section-title">Danh Mục <span class="gold-text">10 Công Ty Thành Viên Chuyên Biệt</span></h2>
+      </div>
+      <div class="table-responsive">
+        <table class="luxury-table">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Mã Đơn Vị</th>
+              <th>Tên Công Ty Thành Viên</th>
+              <th>Lĩnh Vực Chuyên Biệt</th>
+              <th>Phân Khu Dự Án Phụ Trách</th>
+              <th>Hồ Sơ</th>
+            </tr>
+          </thead>
+          <tbody id="fullSubTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div id="app-footer"></div>
+
+  <script src="js/main.js"></script>
+  <script>
+    function updateScrolly(stepNum, tag, title, desc, metricVal, metricSub) {
+      document.getElementById('scrollyChapterTag').textContent = tag;
+      document.getElementById('scrollyVisualTitle').textContent = title;
+      document.getElementById('scrollyVisualDesc').textContent = desc;
+      document.getElementById('scrollyMetricValue').textContent = metricVal;
+      document.getElementById('scrollyMetricSub').textContent = metricSub;
+
+      const steps = document.querySelectorAll('.scrolly-step');
+      steps.forEach((s, idx) => s.classList.toggle('active-step', idx === stepNum - 1));
+    }
+
+    function filterPartners(cat, btn) {
+      document.querySelectorAll('#partnerFilterBar .filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.partner-card').forEach(card => {
+        card.style.display = (cat === 'all' || card.getAttribute('data-pcat') === cat) ? 'block' : 'none';
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const tbody = document.getElementById('fullSubTableBody');
+      if (tbody && typeof SUBSIDIARIES_DATA !== 'undefined') {
+        tbody.innerHTML = SUBSIDIARIES_DATA.map(s => `
+          <tr>
+            <td><strong>#${s.id}</strong></td>
+            <td><span class="badge-pill badge-gold">${s.code}</span></td>
+            <td><strong>${s.icon} ${s.name}</strong></td>
+            <td>${s.shortRole}</td>
+            <td>${s.zones}</td>
+            <td><button class="btn btn-outline-gold" style="padding: 6px 12px; font-size: 0.75rem;" onclick="openSubsidiaryModal(${s.id})">Chi tiết</button></td>
+          </tr>
+        `).join('');
+      }
+    });
+  </script>
+</body>
+</html>
